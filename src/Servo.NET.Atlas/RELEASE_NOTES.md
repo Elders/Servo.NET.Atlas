@@ -1,3 +1,6 @@
+#### 0.1.0-beta0006 - 28.10.2015
+* Add AtlasConfig for specifying Atlas's hostname+port
+
 #### 0.1.0-beta0005 - 28.10.2015
 * Update Servo package
 

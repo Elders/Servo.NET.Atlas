@@ -9,13 +9,21 @@ namespace Servo.NET.Atlas
 {
     public class MetricPublishTask : IWork
     {
+        readonly AtlasConfig config;
+
+        public MetricPublishTask(AtlasConfig config)
+        {
+            if (config == null) throw new ArgumentNullException(nameof(config));
+            this.config = config;
+        }
+
         public DateTime ScheduledStart { get; set; }
 
         public void Start()
         {
             try
             {
-                var publisher = new AtlasMetricPublisher(new Uri("http://192.168.69.91:7101"));
+                var publisher = new AtlasMetricPublisher(config);
                 var mon = DefaultMonitorRegistry.getInstance();
                 var monitors = mon.getRegisteredMonitors();
 

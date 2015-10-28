@@ -6,12 +6,13 @@ namespace Servo.NET.Atlas
     public class AtlasMetricPublisher
     {
         readonly RestClient client;
-        string resourceLocation = "api/v1/publish";
+        string resourceLocation;
 
-        public AtlasMetricPublisher(Uri publishUri)
+        public AtlasMetricPublisher(AtlasConfig config)
         {
-            client = new RestClient(publishUri);
+            client = new RestClient(config.Hostname);
             client.AddDefaultHeader("Content-Type", "application'/json");
+            resourceLocation = config.Endpoint;
         }
 
         public void Publish(AtlasMetrics metrics)

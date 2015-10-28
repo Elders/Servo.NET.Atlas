@@ -59,6 +59,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtlasConfig.cs" />
     <Compile Include="AtlasMetricPublisher.cs" />
     <Compile Include="AtlasMetrics.cs" />
     <Compile Include="CommandMetricObserver.cs" />

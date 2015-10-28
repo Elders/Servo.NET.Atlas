@@ -6,15 +6,15 @@ namespace Servo.NET.Atlas
     {
         readonly WorkPool pool;
 
-        public CommandMetricObserver()
+        public CommandMetricObserver(AtlasConfig config)
         {
-            string poolName = "This name is assigned to the current Thread.Name";
+            string poolName = "atlas-" + config.Endpoint;
             int numberOfThreadsAvailableForThePool = 1;
 
             pool = new WorkPool(poolName, numberOfThreadsAvailableForThePool);
             for (int i = 0; i < numberOfThreadsAvailableForThePool; i++)
             {
-                pool.AddWork(new MetricPublishTask());
+                pool.AddWork(new MetricPublishTask(config));
             }
             pool.StartCrawlers();
         }
