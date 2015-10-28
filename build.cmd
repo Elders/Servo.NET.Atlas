@@ -55,4 +55,4 @@ IF NOT [%1]==[] (set TARGET="%1")
 SET SUMMARY="Servo.NET.Atlas"
 SET DESCRIPTION="Servo.NET.Atlas"
 
-%FAKE% %NYX% "target=%TARGET%" appName=Servo.NET.Atlas appSummary=%SUMMARY% appDescription=%DESCRIPTION%
+%FAKE% %NYX% "target=%TARGET%" appName=Servo.NET.Atlas appSummary=%SUMMARY% appDescription=%DESCRIPTION% nugetPackageName=Servo.Atlas

@@ -10,5 +10,6 @@
     <licenseUrl>https://raw.githubusercontent.com/Elders/Nyx/master/LICENSE</licenseUrl>
     <releaseNotes>@releaseNotes@</releaseNotes>
     <tags>metric atlas</tags>
+    @dependencies@
   </metadata>
 </package>
