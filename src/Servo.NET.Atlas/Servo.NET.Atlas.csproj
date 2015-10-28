@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Servo.NET.Atlas</RootNamespace>
-    <AssemblyName>Servo.NET.Atlas</AssemblyName>
+    <AssemblyName>Elders.Servo.Atlas</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
