@@ -21,7 +21,7 @@ namespace Servo.NET.Atlas
             var respo = client.Execute(request);
             if (respo.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                throw new Exception(respo.ErrorMessage);
+                throw new Exception(respo.ErrorMessage, respo.ErrorException);
             }
         }
     }
