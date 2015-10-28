@@ -3,6 +3,11 @@
 SETLOCAL
 
 SET NUGET=%LocalAppData%\NuGet\NuGet.exe
+@echo off
+
+SETLOCAL
+
+SET NUGET=%LocalAppData%\NuGet\NuGet.exe
 SET FAKE=%LocalAppData%\FAKE\tools\Fake.exe
 SET NYX=%LocalAppData%\Nyx\tools\build.fsx
 SET GITVERSION=%LocalAppData%\GitVersion.CommandLine\tools\GitVersion.exe
@@ -47,7 +52,7 @@ echo Downloading latest version of Nyx...
 SET TARGET="Build"
 IF NOT [%1]==[] (set TARGET="%1")
 
-SET SUMMARY="Netflix.Servo.NET"
-SET DESCRIPTION="Netflix.Servo.NET"
+SET SUMMARY="Servo.NET.Atlas"
+SET DESCRIPTION="Servo.NET.Atlas"
 
-%FAKE% %NYX% "target=%TARGET%" appName=Netflix.Servo appSummary=%SUMMARY% appDescription=%DESCRIPTION%
+%FAKE% %NYX% "target=%TARGET%" appName=Servo.NET.Atlas appSummary=%SUMMARY% appDescription=%DESCRIPTION%
