@@ -1,3 +1,6 @@
+#### 0.1.0-beta0007 - 02.06.2016
+* Downgrade .net 4.6 => 4.5
+
 #### 0.1.0-beta0006 - 28.10.2015
 * Add AtlasConfig for specifying Atlas's hostname+port
 
