@@ -36,7 +36,7 @@ namespace Servo.NET.Atlas
                     else
                         monitorsFlatten.Add(monitor);
                 }
-                var timestamp = DateTime.UtcNow.ToUnixTimestamp() * 1000;
+                var timestamp = DateTime.UtcNow.GetCurrentUnixTimestampMillis();
                 var metrics = monitorsFlatten.Select(x => new Metric(x.getConfig(), timestamp, x.GetValue()));
 
                 AtlasMetrics aa = new AtlasMetrics(metrics);
@@ -106,6 +106,11 @@ namespace Servo.NET.Atlas
             int unixSeconds = (int)Math.Floor(timestamp);
             var current = unixStartDate.AddSeconds(timestamp);
             return current.AddMilliseconds(timestamp - unixSeconds);
+        }
+
+        public static long GetCurrentUnixTimestampMillis(this DateTime date)
+        {
+            return (long)(date - unixStartDate).TotalMilliseconds;
         }
     }
 }

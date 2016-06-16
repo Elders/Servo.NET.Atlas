@@ -1,3 +1,6 @@
+#### 0.1.0-beta0009 - 16.06.2016
+* Publish metrics in milliseconds instead of seconds. Try 2
+
 #### 0.1.0-beta0008 - 16.06.2016
 * Publish metrics in milliseconds instead of seconds
 
