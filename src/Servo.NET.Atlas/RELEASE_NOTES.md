@@ -1,3 +1,6 @@
+#### 0.1.0-beta0008 - 16.06.2016
+* Publish metrics in milliseconds instead of seconds
+
 #### 0.1.0-beta0007 - 02.06.2016
 * Downgrade .net 4.6 => 4.5
 
