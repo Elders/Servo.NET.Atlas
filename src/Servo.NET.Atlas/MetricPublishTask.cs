@@ -4,11 +4,14 @@ using System.Linq;
 using Elders.Multithreading.Scheduler;
 using Netflix.Servo;
 using Netflix.Servo.Monitor;
+using Servo.NET.Atlas.Logging;
 
 namespace Servo.NET.Atlas
 {
     public class MetricPublishTask : IWork
     {
+        static ILog log = LogProvider.GetLogger(typeof(MetricPublishTask));
+
         readonly AtlasConfig config;
 
         public MetricPublishTask(AtlasConfig config)
@@ -39,12 +42,12 @@ namespace Servo.NET.Atlas
                 var timestamp = DateTime.UtcNow.GetCurrentUnixTimestampMillis();
                 var metrics = monitorsFlatten.Select(x => new Metric(x.getConfig(), timestamp, x.GetValue()));
 
-                AtlasMetrics aa = new AtlasMetrics(metrics);
-                publisher.Publish(aa);
+                AtlasMetrics atlasMetrics = new AtlasMetrics(metrics);
+                publisher.Publish(atlasMetrics);
             }
             catch (Exception ex)
             {
-                //log
+                log.ErrorException("Failed to execute task.", ex);
             }
             finally
             {

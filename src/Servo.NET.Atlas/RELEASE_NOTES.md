@@ -1,3 +1,6 @@
+#### 0.1.0-beta0010 - 18.06.2016
+* When there is a problem with sending stats to Atlas we just log the error instead of throwing exception.
+
 #### 0.1.0-beta0009 - 16.06.2016
 * Publish metrics in milliseconds instead of seconds. Try 2
 

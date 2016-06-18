@@ -1,10 +1,12 @@
-﻿using System;
-using RestSharp;
+﻿using RestSharp;
+using Servo.NET.Atlas.Logging;
 
 namespace Servo.NET.Atlas
 {
     public class AtlasMetricPublisher
     {
+        static ILog log = LogProvider.GetLogger(typeof(AtlasMetricPublisher));
+
         readonly RestClient client;
         string resourceLocation;
 
@@ -19,11 +21,9 @@ namespace Servo.NET.Atlas
         {
             var request = new RestRequest(resourceLocation, Method.POST);
             request.AddJsonBody(metrics);
-            var respo = client.Execute(request);
-            if (respo.StatusCode != System.Net.HttpStatusCode.OK)
-            {
-                throw new Exception(respo.ErrorMessage, respo.ErrorException);
-            }
+            var response = client.Execute(request);
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                log.ErrorException("Failed to push metrics. Details: " + response.Content, response.ErrorException);
         }
     }
 }
