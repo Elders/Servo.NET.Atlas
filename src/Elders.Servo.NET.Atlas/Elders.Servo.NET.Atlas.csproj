@@ -35,12 +35,12 @@
       <HintPath>..\packages\Multithreading.Scheduler.1.1.0\lib\net45-full\Elders.Multithreading.Scheduler.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Elders.Servo, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Servo.0.1.0-beta0004\lib\net45-full\Elders.Servo.dll</HintPath>
+    <Reference Include="Elders.Servo.NET, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Servo.NET.0.1.2\lib\net45-full\Elders.Servo.NET.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Java.Util.Concurrent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Servo.0.1.0-beta0004\lib\net45-full\Java.Util.Concurrent.dll</HintPath>
+      <HintPath>..\packages\Servo.NET.0.1.2\lib\net45-full\Java.Util.Concurrent.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">

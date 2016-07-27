@@ -1,6 +1,6 @@
 ﻿using Elders.Multithreading.Scheduler;
 
-namespace Servo.NET.Atlas
+namespace Elders.Servo.NET.Atlas
 {
     public class CommandMetricObserver
     {

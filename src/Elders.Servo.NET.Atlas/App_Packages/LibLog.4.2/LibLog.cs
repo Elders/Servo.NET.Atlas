@@ -40,23 +40,23 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "Servo.NET.Atlas.Logging")]
-[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "Servo.NET.Atlas.Logging.Logger.#Invoke(Servo.NET.Atlas.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "Elders.Servo.NET.Atlas.Logging")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "Elders.Servo.NET.Atlas.Logging.Logger.#Invoke(Elders.Servo.NET.Atlas.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
 
 // If you copied this file manually, you need to change all "YourRootNameSpace" so not to clash with other libraries
 // that use LibLog
 #if LIBLOG_PROVIDERS_ONLY
-namespace Servo.NET.Atlas.LibLog
+namespace Elders.Servo.NET.Atlas.LibLog
 #else
-namespace Servo.NET.Atlas.Logging
+namespace Elders.Servo.NET.Atlas.Logging
 #endif
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
 #if LIBLOG_PROVIDERS_ONLY
-    using Servo.NET.Atlas.LibLog.LogProviders;
+    using Elders.Servo.NET.Atlas.LibLog.LogProviders;
 #else
-    using Servo.NET.Atlas.Logging.LogProviders;
+    using Elders.Servo.NET.Atlas.Logging.LogProviders;
 #endif
     using System;
 #if !LIBLOG_PROVIDERS_ONLY
@@ -426,7 +426,7 @@ namespace Servo.NET.Atlas.Logging
         /// The disable logging environment variable. If the environment variable is set to 'true', then logging
         /// will be disabled.
         /// </summary>
-        public const string DisableLoggingEnvironmentVariable = "Servo.NET.Atlas_LIBLOG_DISABLE";
+        public const string DisableLoggingEnvironmentVariable = "Elders.Servo.NET.Atlas_LIBLOG_DISABLE";
         private const string NullLogProvider = "Current Log Provider is not set. Call SetCurrentLogProvider " +
                                                "with a non-null value first.";
         private static dynamic s_currentLogProvider;
@@ -726,9 +726,9 @@ namespace Servo.NET.Atlas.Logging
 }
 
 #if LIBLOG_PROVIDERS_ONLY
-namespace Servo.NET.Atlas.LibLog.LogProviders
+namespace Elders.Servo.NET.Atlas.LibLog.LogProviders
 #else
-namespace Servo.NET.Atlas.Logging.LogProviders
+namespace Elders.Servo.NET.Atlas.Logging.LogProviders
 #endif
 {
     using System;

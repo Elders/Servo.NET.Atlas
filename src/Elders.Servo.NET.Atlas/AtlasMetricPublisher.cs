@@ -1,7 +1,7 @@
 ﻿using RestSharp;
-using Servo.NET.Atlas.Logging;
+using Elders.Servo.NET.Atlas.Logging;
 
-namespace Servo.NET.Atlas
+namespace Elders.Servo.NET.Atlas
 {
     public class AtlasMetricPublisher
     {

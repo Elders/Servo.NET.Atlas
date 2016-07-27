@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Netflix.Servo;
-using Netflix.Servo.Monitor;
-using Netflix.Servo.Tag;
+using Elders.Servo.NET;
+using Elders.Servo.NET.Monitor;
+using Elders.Servo.NET.Tag;
 
-namespace Servo.NET.Atlas
+namespace Elders.Servo.NET.Atlas
 {
     /// <summary>
     /// Utility class to deal with rewriting keys/values to the character set accepted by atlas.

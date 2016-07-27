@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Elders.Multithreading.Scheduler;
-using Netflix.Servo;
-using Netflix.Servo.Monitor;
-using Servo.NET.Atlas.Logging;
+using Elders.Servo.NET;
+using Elders.Servo.NET.Monitor;
+using Elders.Servo.NET.Atlas.Logging;
 
-namespace Servo.NET.Atlas
+namespace Elders.Servo.NET.Atlas
 {
     public class MetricPublishTask : IWork
     {
@@ -47,7 +47,7 @@ namespace Servo.NET.Atlas
             }
             catch (Exception ex)
             {
-                log.ErrorException("Failed to execute task.", ex);
+                log.FatalException("Failed to execute task.", ex);
             }
             finally
             {

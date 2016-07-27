@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Netflix.Servo;
-using Netflix.Servo.Attributes;
-using Netflix.Servo.Tag;
+using Elders.Servo.NET;
+using Elders.Servo.NET.Attributes;
+using Elders.Servo.NET.Tag;
 
-namespace Servo.NET.Atlas
+namespace Elders.Servo.NET.Atlas
 {
     public class AtlasMetrics
     {
