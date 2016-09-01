@@ -16,7 +16,6 @@ namespace Elders.Servo.NET.Atlas
             {
                 pool.AddWork(new MetricPublishTask(config));
             }
-            pool.StartCrawlers();
         }
 
         public void Run()
@@ -26,7 +25,7 @@ namespace Elders.Servo.NET.Atlas
 
         public void Stop()
         {
-            pool.Stop();
+            pool?.Stop();
         }
     }
 }
